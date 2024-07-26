@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oorla Authentic Delicacies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="procss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+        function display(categoryId) {
+            var productContainers = document.getElementsByClassName('product-cont');
+            for (var i = 0; i < productContainers.length; i++) {
+                productContainers[i].classList.remove('active');
+            }
+            var selectedCategory = document.getElementById(categoryId);
+            if (selectedCategory) {
+                selectedCategory.classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="bg-container">
+      <div class="top-cont d-flex flex-row justify-content-center">
+        <img src="https://www.oorla.in/cdn/shop/files/logo-oorla_1240_by_628_px_5345ed35-0371-4b4b-9e26-0d712bae546c.png?v=1689827859&width=95" class="logo">
+        <div class="search-bar">
+        <form action="/search" method="get">
+          <input type="search" name="query" placeholder="Search...">
+          <button type="submit" class="btn-primary">Search</button>
+        </form>
+        </div>
+        <i class="fa-regular fa-user icon"></i>
+        <i class="fa-solid fa-cart-shopping icon"></i>
+        
+      </div>
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="#">TamilNadu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Kerala</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Andrea & Telangana</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Karnataka</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Combos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                More
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Submenu 1</a>
+                                <a class="dropdown-item" href="#">Submenu 2</a>
+                                <a class="dropdown-item" href="#">Submenu 3</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <img src="https://www.oorla.in/cdn/shop/files/in_SS_home_-_Web_169b2ef6-2bf8-405c-ac4e-5c657ed3142f.jpg?v=1715603224&width=1500" class="img_prop">
+        <div class="d-flex flex-row justify-content-center section1">
+            <p class="section1-para">Flat 5% off abouve 799/-</p>
+            <p class="section1-para">Flat 10% off above 1399/-</p>
+            <p class="section1-para">Flat 15% off on Combos</p>
+
+        </div>
+        <h6 class="section2_head1">Fall in Love with HomeMade south Indian <br> Pickle</h6>
+        <h6 class="section2_head2">Collections list</h6>
+        <div class="d-flex flex-row justify-content-center ">
+            <img src="https://www.oorla.in/cdn/shop/files/953581063.jpg?v=1716912365&width=400" class="section2_img">
+            <img src="https://www.oorla.in/cdn/shop/files/953581064.jpg?v=1716912365&width=400" class="section2_img">
+            <img src="https://www.oorla.in/cdn/shop/files/Naadan_Palahara_Petti_15.jpg?v=1716912364&width=400" class="section2_img">
+
+        </div>
+        <!----------------------------------------------------------------------------------------->
+        <div class="cont-mid text-center">
+          <p class="para-mid">When life gives you pickle, just lick it!</p>
+          <div class="d-flex flex-row justify-content-center">
+            <button class="button-mid" onclick="display('category-1')">All</button>
+            <button class="button-mid" onclick="display('category-2')">Tamil Nadu</button>
+            <button class="button-mid" onclick="display('category-3')">AP/TS</button>
+            <button class="button-mid" onclick="display('category-4')">Kerala</button>
+          </div>
+          <div class="product-cont d-flex flex-row justify-content-center" id="category-1">
+            <div class="product-cont-1 d-flex flex-row justify-content-center">
+              <div class="product">
+                <img src="https://www.oorla.in/cdn/shop/products/Tamil-Nadu-Garlic-Pickle-2.jpg?v=1681114546&width=400" class="product-image">
+                <p class="product-title">Tamil Nadu Garlic Pickle</p>
+                <p class="product-prop">250g</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  ADD TO CART
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Tamil Nadu Garlic Pickle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body text-left">
+                        <h5>Rs: 170</h5>
+                        <h4>QUANTITY:250G</h4>
+                      </div>
+                        <button type="button" class="btn btn-info pop-button" data-dismiss="modal">Add To Cart</button>
+                        <button type="button" class="btn btn-dark pop-button">BUY IT NOW</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <img src="https://www.oorla.in/cdn/shop/products/Tamil-Nadu-Avakai-Pickle-2.jpg?v=1682346376&width=400" class="product-image">
+                <p class="product-title">Tamil Nadu Avakai Pickle</p>
+                <p class="product-prop">500g</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  ADD TO CART
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"Tamil Nadu Avakai Pickle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+          <!-------------------------->
+          <div class="product-cont d-flex flex-row justify-content-center" id="category-2">
+            <div class="product-cont-1 d-flex flex-row justify-content-center">
+              <div class="product">
+                <img src="https://www.oorla.in/cdn/shop/products/Tamil-Nadu-Amla-Pickle-2.jpg?v=1681114024&width=400" class="product-image">
+                <p class="product-title">Tamil Nadu Amla Pickle</p>
+                <p class="product-prop">250g</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  ADD TO CART
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Tamil Nadu Amla Pickle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="product">
+                <img src="https://www.oorla.in/cdn/shop/products/Tamil-Nadu-ginger-Pickle-2.jpg?v=1681825431&width=400" class="product-image">
+                <p class="product-title">Tamil Nadu Ginger Pickle</p>
+                <p class="product-prop">500g</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  ADD TO CART
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Tamil Nadu Ginger Pickle</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fotter">
+  </div>
+ </div>
+</body>
+</html>
